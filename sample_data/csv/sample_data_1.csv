@@ -1,0 +1,7 @@
+month,sales,profit,expenses,growthRate,category
+January,3000,1200,1800,15,Electronics
+February,3500,1500,2000,10,Clothing
+March,4000,1800,2200,20,Home Appliances
+April,4500,2000,2500,25,Books
+May,5000,2500,2500,30,Furniture
+June,5500,2800,2700,35,Toys

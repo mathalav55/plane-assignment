@@ -1,0 +1,51 @@
+[
+    {
+      "month": "January",
+      "sales": 3000,
+      "profit": 1200,
+      "expenses": 1800,
+      "growthRate": 15,
+      "category": "Electronics"
+    },
+    {
+      "month": "February",
+      "sales": 3500,
+      "profit": 1500,
+      "expenses": 2000,
+      "growthRate": 10,
+      "category": "Clothing"
+    },
+    {
+      "month": "March",
+      "sales": 4000,
+      "profit": 1800,
+      "expenses": 2200,
+      "growthRate": 20,
+      "category": "Home Appliances"
+    },
+    {
+      "month": "April",
+      "sales": 4500,
+      "profit": 2000,
+      "expenses": 2500,
+      "growthRate": 25,
+      "category": "Books"
+    },
+    {
+      "month": "May",
+      "sales": 5000,
+      "profit": 2500,
+      "expenses": 2500,
+      "growthRate": 30,
+      "category": "Furniture"
+    },
+    {
+      "month": "June",
+      "sales": 5500,
+      "profit": 2800,
+      "expenses": 2700,
+      "growthRate": 35,
+      "category": "Toys"
+    }
+  ]
+  

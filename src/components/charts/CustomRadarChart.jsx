@@ -6,6 +6,7 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
   Radar,
+  Legend,
 } from "recharts";
 import { capitalize, isArray } from "lodash";
 import { generateColors } from "../../utils";
@@ -24,13 +25,6 @@ const CustomRadarChart = ({ data, xAxis, yAxis }) => {
         <PolarGrid />
         <PolarAngleAxis dataKey={xAxis} />
         <PolarRadiusAxis />
-        <Radar
-          name="Mike"
-          dataKey="A"
-          stroke="#8884d8"
-          fill="#8884d8"
-          fillOpacity={0.6}
-        />
         {isArray(yAxis) ? (
           yAxis.map((e, index) => {
             return (
@@ -52,6 +46,7 @@ const CustomRadarChart = ({ data, xAxis, yAxis }) => {
             fillOpacity={0.6}
           />
         )}
+        <Legend/>
       </RadarChart>
     </ResponsiveContainer>
   );

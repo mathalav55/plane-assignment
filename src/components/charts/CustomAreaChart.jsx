@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  Legend,
 } from "recharts";
 import { useState, useEffect } from "react";
 import { isArray } from "lodash";
@@ -54,6 +55,7 @@ const CustomAreaChart = ({ data, xAxis, yAxis }) => {
             fill={colors[0]}
           />
         )}
+        <Legend/>
       </AreaChart>
     </ResponsiveContainer>
   );

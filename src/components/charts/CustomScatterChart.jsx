@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "lodash";
+import _, { capitalize } from "lodash";
 import {
   ResponsiveContainer,
   ScatterChart,
@@ -8,6 +8,7 @@ import {
   YAxis,
   Tooltip,
   Scatter,
+  Legend,
 } from "recharts";
 
 const CustomScatterChart = ({ data, xAxis, yAxis }) => {
@@ -26,12 +27,13 @@ const CustomScatterChart = ({ data, xAxis, yAxis }) => {
           <YAxis
             type="number"
             dataKey={yAxis}
-            name=""
+            name={capitalize(yAxis)}
             unit=""
             label={{ value: _.capitalize(yAxis), angle: -90, position: 'insideLeft' }}
           />
           <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-          <Scatter name="" data={data} fill="#8884d8" />
+          <Scatter name={capitalize(yAxis)} data={data} fill="#8884d8" />
+          <Legend/>
         </ScatterChart>
       </ResponsiveContainer>
     </div>

@@ -4,7 +4,7 @@ import { useDropzone } from "react-dropzone";
 import Select from "react-select";
 import Papa from "papaparse";
 import DynamicChart from "./components/DynamicChart";
-import CloseIcon from './assets/close.png'
+import CloseIcon from "./assets/close.png";
 function App() {
   const [acceptedFiles, setAcceptedFiles] = useState([]);
   // React file DropZone Initalisation
@@ -129,28 +129,29 @@ function App() {
                 className="rounded-md py-8 max-sm:px-12 px-40 w-fit border-slate-300 border-dashed border-[3px]"
               >
                 <input {...getInputProps()} />
-                {acceptedFiles.length ? (
-                  <>
-                    <p>{acceptedFiles[0].name}</p>
-                  </>
-                ) : (
-                  <div>
-                    <p className="text-center">Upload File</p>
-                    <span className="text-xs font-medium text-slate-400">
-                      Accepted files .csv, .json
-                    </span>
-                  </div>
-                )}
+                <div>
+                  <p className="text-center">Upload File</p>
+                  <span className="text-xs font-medium text-slate-400">
+                    Accepted files .csv, .json
+                  </span>
+                </div>
               </div>
               {acceptedFiles.length ? (
-                <span
-                  className="text-xs cursor-pointer"
-                  onClick={() => {
-                    setAcceptedFiles([]);
-                  }}
-                >
-                  <img src={CloseIcon} width={12} alt="" className="mt-2" />
-                </span>
+                <>
+                  <div className="flex gap-2  align-middle mt-3">
+                    <p className="text-sm">{acceptedFiles[0].name} </p>
+                    <div>
+                      <img
+                        src={CloseIcon}
+                        onClick={() => {
+                          setAcceptedFiles([]);
+                        }}
+                        alt=""
+                        className="cursor-pointer w-2 h-2"
+                      />
+                    </div>
+                  </div>
+                </>
               ) : (
                 <></>
               )}

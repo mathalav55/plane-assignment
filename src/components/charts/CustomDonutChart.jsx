@@ -37,33 +37,27 @@ const CustomPieChart = ({ data, yAxis, xAxis, isPie }) => {
   }, [chartData]);
 
   return (
-    <div>
-      <ResponsiveContainer width={'100%'}>
-        {chartData.length ? (
-          <PieChart>
-            <Pie
-              data={chartData}
-              cx={200}
-              cy={200}
-              innerRadius={isPie ? 0 : 90}
-              outerRadius={140}
-              fill="#8884d8"
-              paddingAngle={2}
-              dataKey="value"
-              label
-            >
-              {chartData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={colors[index]} />
-              ))}
-            </Pie>
-            {/* <Tooltip /> */}
-            <Legend />
-          </PieChart>
-        ) : (
-          <></>
-        )}
-      </ResponsiveContainer>
-    </div>
+    <>
+      <PieChart width={400} height={400}>
+        <Pie
+          data={chartData}
+          cx={200}
+          cy={200}
+          innerRadius={isPie ? 0 : 90}
+          outerRadius={140}
+          fill="#8884d8"
+          paddingAngle={2}
+          dataKey="value"
+          label
+        >
+          {chartData.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={colors[index]} />
+          ))}
+        </Pie>
+        {/* <Tooltip /> */}
+        <Legend />
+      </PieChart>
+    </>
   );
 };
 

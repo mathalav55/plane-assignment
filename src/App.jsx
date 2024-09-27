@@ -4,6 +4,7 @@ import { useDropzone } from "react-dropzone";
 import Select from "react-select";
 import Papa from "papaparse";
 import DynamicChart from "./components/DynamicChart";
+import CloseIcon from './assets/close.png'
 function App() {
   const [acceptedFiles, setAcceptedFiles] = useState([]);
   // React file DropZone Initalisation
@@ -115,17 +116,17 @@ function App() {
 
   return (
     <div className="">
-      <div className="my-[2rem] w-[90%] m-auto bg-white p-10 rounded-lg border border-slate-200">
+      <div className="my-[2rem] w-[90%] m-auto bg-white p-10 max-sm:p-3 rounded-lg border border-slate-200">
         <h3 className="text-4xl font-semibold text-slate-600 text-center">
           Dynamic Data Visualisation Dashboard
         </h3>
-        <div className="flex justify-between mt-10">
-          <div className="w-[40%]">
+        <div className="flex justify-between flex-wrap max-sm:gap-5 mt-10">
+          <div className="w-[40%] max-sm:w-[100%]">
             {/* File Upload - Click or Drag and Drop */}
             <div className="">
               <div
                 {...getRootProps({ className: "dropzone" })}
-                className="rounded-md py-8 px-40 w-fit border-slate-300 border-dashed border-[3px]"
+                className="rounded-md py-8 max-sm:px-12 px-40 w-fit border-slate-300 border-dashed border-[3px]"
               >
                 <input {...getInputProps()} />
                 {acceptedFiles.length ? (
@@ -148,7 +149,7 @@ function App() {
                     setAcceptedFiles([]);
                   }}
                 >
-                  clear
+                  <img src={CloseIcon} width={12} alt="" className="mt-2" />
                 </span>
               ) : (
                 <></>
@@ -170,8 +171,8 @@ function App() {
                     isClearable
                   />
                 </div>
-                <div className="flex gap-4 mt-5">
-                  <div className="w-[50%]">
+                <div className="flex flex-wrap gap-4 mt-5">
+                  <div className="w-[45%] max-sm:w-[100%]">
                     <p className="text-sm font-medium mb-2">X-axis</p>
                     <Select
                       className=""
@@ -189,7 +190,7 @@ function App() {
                       isClearable
                     />
                   </div>
-                  <div className="w-[50%]">
+                  <div className="w-[45%] max-sm:w-[100%]">
                     <p className="text-sm font-medium mb-2">Y-axis</p>
                     <Select
                       className=""
@@ -227,7 +228,7 @@ function App() {
               </div> */}
             </div>
           </div>
-          <div className="w-[50%]">
+          <div className="w-[50%] max-sm:w-[100%]">
             {config.chartType && <DynamicChart {...config} />}
           </div>
         </div>

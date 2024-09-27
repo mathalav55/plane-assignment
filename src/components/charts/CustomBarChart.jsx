@@ -21,7 +21,7 @@ const CustomBarChart = ({ data, xAxis, yAxis }) => {
   }, [yAxis]);
   const [isStacked, setStacked] = useState(false);
   return (
-    <div>
+    <>
       <div>
         {isArray(yAxis) && yAxis.length > 1 ? (
           <div className="flex gap-2 justify-end">
@@ -40,37 +40,37 @@ const CustomBarChart = ({ data, xAxis, yAxis }) => {
           <></>
         )}
       </div>
-      <BarChart
-        data={data}
-        margin={{
-          top: 20,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-        width={650}
-        height={400}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey={xAxis} />
-        <YAxis />
-        <Tooltip />
-        <Legend formatter={(value) => _.capitalize(value)} />
-        {isArray(yAxis) ? (
-          yAxis.map((e, index) => {
-            return (
-              <Bar
-                dataKey={e.value}
-                fill={colors[index]}
-                stackId={isStacked ? "a" : null}
-              />
-            );
-          })
-        ) : (
-          <Bar dataKey={yAxis} fill={colors[0]} />
-        )}
-      </BarChart>
-    </div>
+      <ResponsiveContainer width={'100%'} maxHeight={'60vh'}>
+        <BarChart
+          data={data}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey={xAxis} />
+          <YAxis />
+          <Tooltip />
+          <Legend formatter={(value) => _.capitalize(value)} />
+          {isArray(yAxis) ? (
+            yAxis.map((e, index) => {
+              return (
+                <Bar
+                  dataKey={e.value}
+                  fill={colors[index]}
+                  stackId={isStacked ? "a" : null}
+                />
+              );
+            })
+          ) : (
+            <Bar dataKey={yAxis} fill={colors[0]} />
+          )}
+        </BarChart>
+      </ResponsiveContainer>
+    </>
   );
 };
 

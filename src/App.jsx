@@ -30,6 +30,9 @@ function App() {
       );
       setConfig({
         ...config,
+        xAxis: null,
+        yAxis: null,
+        chartType: null,
         data: data,
       });
     };
@@ -48,6 +51,9 @@ function App() {
         );
         setConfig({
           ...config,
+          xAxis: null,
+          yAxis: null,
+          chartType: null,
           data: result.data,
         });
       },
@@ -56,18 +62,19 @@ function App() {
 
   // Hook to capture change of acceptedFiles variable
   useEffect(() => {
-    setConfig({
-      xAxis: null,
-      yAxis: null,
-      chartType: null,
-      data: null,
-    });
-    setHeaders([]);
     if (acceptedFiles.length) {
       if (acceptedFiles[0].type === "application/json")
         handleJsonUpload(acceptedFiles[0]);
       if (acceptedFiles[0].type === "text/csv")
         handleCsvUpload(acceptedFiles[0]);
+    } else {
+      setConfig({
+        xAxis: null,
+        yAxis: null,
+        chartType: null,
+        data: null,
+      });
+      setHeaders([]);
     }
   }, [acceptedFiles]);
 

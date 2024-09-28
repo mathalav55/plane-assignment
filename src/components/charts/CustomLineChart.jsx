@@ -20,30 +20,33 @@ const CustomLineChart = ({ data, xAxis, yAxis }) => {
     }
   }, [yAxis]);
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <LineChart
-        data={data}
-        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-      >
-        <XAxis dataKey={xAxis} />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        {isArray(yAxis) ? (
-          yAxis.map((e, index) => {
-            return (
-              <Line
-                type={"monotone"}
-                dataKey={e.value}
-                stroke={colors[index]}
-              />
-            );
-          })
-        ) : (
-          <Line type={"monotone"} dataKey={yAxis} stroke={colors[0]} />
-        )}
-      </LineChart>
-    </ResponsiveContainer>
+    <>
+      <ResponsiveContainer width="100%" height={'100%'}>
+        <LineChart
+          data={data}
+          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+        >
+          <XAxis dataKey={xAxis} />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          {isArray(yAxis) ? (
+            yAxis.map((e, index) => {
+              return (
+                <Line
+                  type={"monotone"}
+                  dataKey={e.value}
+                  stroke={colors[index]}
+                  key={index}
+                />
+              );
+            })
+          ) : (
+            <Line type={"monotone"} dataKey={yAxis} stroke={colors[0]} />
+          )}
+        </LineChart>
+      </ResponsiveContainer>
+    </>
   );
 };
 

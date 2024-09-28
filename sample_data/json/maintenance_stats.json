@@ -1,0 +1,112 @@
+[
+    {
+      "AircraftID": "P1001",
+      "TotalMaintenance": 10,
+      "Completed": 9,
+      "Pending": 1,
+      "Overdue": 0,
+      "AvgMaintenanceDurationDays": 5,
+      "TotalCostUSD": 50000,
+      "NextScheduledMaintenanceDays": 30,
+      "MaintenanceComplianceRate": 90
+    },
+    {
+      "AircraftID": "P1002",
+      "TotalMaintenance": 8,
+      "Completed": 7,
+      "Pending": 1,
+      "Overdue": 0,
+      "AvgMaintenanceDurationDays": 4,
+      "TotalCostUSD": 48000,
+      "NextScheduledMaintenanceDays": 25,
+      "MaintenanceComplianceRate": 87.5
+    },
+    {
+      "AircraftID": "P1003",
+      "TotalMaintenance": 12,
+      "Completed": 10,
+      "Pending": 2,
+      "Overdue": 0,
+      "AvgMaintenanceDurationDays": 6,
+      "TotalCostUSD": 52000,
+      "NextScheduledMaintenanceDays": 40,
+      "MaintenanceComplianceRate": 83.3
+    },
+    {
+      "AircraftID": "P1004",
+      "TotalMaintenance": 9,
+      "Completed": 8,
+      "Pending": 1,
+      "Overdue": 0,
+      "AvgMaintenanceDurationDays": 5,
+      "TotalCostUSD": 47000,
+      "NextScheduledMaintenanceDays": 35,
+      "MaintenanceComplianceRate": 88.9
+    },
+    {
+      "AircraftID": "P1005",
+      "TotalMaintenance": 11,
+      "Completed": 11,
+      "Pending": 0,
+      "Overdue": 0,
+      "AvgMaintenanceDurationDays": 5,
+      "TotalCostUSD": 49000,
+      "NextScheduledMaintenanceDays": 30,
+      "MaintenanceComplianceRate": 100
+    },
+    {
+      "AircraftID": "P1006",
+      "TotalMaintenance": 7,
+      "Completed": 6,
+      "Pending": 1,
+      "Overdue": 0,
+      "AvgMaintenanceDurationDays": 4,
+      "TotalCostUSD": 46500,
+      "NextScheduledMaintenanceDays": 28,
+      "MaintenanceComplianceRate": 85.7
+    },
+    {
+      "AircraftID": "P1007",
+      "TotalMaintenance": 14,
+      "Completed": 14,
+      "Pending": 0,
+      "Overdue": 0,
+      "AvgMaintenanceDurationDays": 3,
+      "TotalCostUSD": 45000,
+      "NextScheduledMaintenanceDays": 20,
+      "MaintenanceComplianceRate": 100
+    },
+    {
+      "AircraftID": "P1008",
+      "TotalMaintenance": 13,
+      "Completed": 12,
+      "Pending": 1,
+      "Overdue": 0,
+      "AvgMaintenanceDurationDays": 4,
+      "TotalCostUSD": 45500,
+      "NextScheduledMaintenanceDays": 22,
+      "MaintenanceComplianceRate": 92.3
+    },
+    {
+      "AircraftID": "P1009",
+      "TotalMaintenance": 5,
+      "Completed": 5,
+      "Pending": 0,
+      "Overdue": 0,
+      "AvgMaintenanceDurationDays": 7,
+      "TotalCostUSD": 53000,
+      "NextScheduledMaintenanceDays": 60,
+      "MaintenanceComplianceRate": 100
+    },
+    {
+      "AircraftID": "P1010",
+      "TotalMaintenance": 6,
+      "Completed": 6,
+      "Pending": 0,
+      "Overdue": 0,
+      "AvgMaintenanceDurationDays": 7,
+      "TotalCostUSD": 55000,
+      "NextScheduledMaintenanceDays": 65,
+      "MaintenanceComplianceRate": 100
+    }
+  ]  

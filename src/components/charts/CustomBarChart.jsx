@@ -17,7 +17,6 @@ const CustomBarChart = ({ data, xAxis, yAxis }) => {
     setColors(
       isArray(yAxis) ? generateColors(yAxis.length) : generateColors(1)
     );
-    console.log({ yAxis });
   }, [yAxis]);
   const [isStacked, setStacked] = useState(false);
   return (
@@ -40,7 +39,7 @@ const CustomBarChart = ({ data, xAxis, yAxis }) => {
           <></>
         )}
       </div>
-      <ResponsiveContainer width={'100%'} maxHeight={'60vh'}>
+      <ResponsiveContainer width={'100%'} maxHeight={400} height={'100%'}>
         <BarChart
           data={data}
           margin={{
@@ -49,16 +48,19 @@ const CustomBarChart = ({ data, xAxis, yAxis }) => {
             left: 20,
             bottom: 5,
           }}
+          width={500}
+          height={400}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey={xAxis} />
+          <XAxis dataKey={xAxis} label={{ value: _.startCase(xAxis),position: 'insideBottom', offset: '-10' }} />
           <YAxis />
           <Tooltip />
-          <Legend formatter={(value) => _.capitalize(value)} />
+          <Legend formatter={(value) => _.startCase(value)} wrapperStyle={{bottom: '-2%'}} />
           {isArray(yAxis) ? (
             yAxis.map((e, index) => {
               return (
                 <Bar
+                  key={index}
                   dataKey={e.value}
                   fill={colors[index]}
                   stackId={isStacked ? "a" : null}

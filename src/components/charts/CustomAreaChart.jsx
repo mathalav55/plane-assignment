@@ -22,7 +22,7 @@ const CustomAreaChart = ({ data, xAxis, yAxis }) => {
     }
   }, [yAxis]);
   return (
-    <ResponsiveContainer width="100%" height="100%">
+    <ResponsiveContainer width="100%" height={'100%'}>
       <AreaChart
         data={data}
         margin={{
@@ -44,6 +44,7 @@ const CustomAreaChart = ({ data, xAxis, yAxis }) => {
                 dataKey={e.value}
                 stroke={colors[index]}
                 fill={colors[index]}
+                key={index}
               />
             );
           })

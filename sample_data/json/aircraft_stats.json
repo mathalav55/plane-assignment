@@ -1,0 +1,122 @@
+[
+    {
+      "AircraftID": "P1001",
+      "TotalFlights": 50,
+      "TotalHours": 3000,
+      "AvgFuelConsumption": 2500,
+      "LifetimeFlights": 500,
+      "LifetimeHours": 30000,
+      "AvgMaintenanceCost": 50000,
+      "RangeKM": 3983,
+      "Capacity": 180,
+      "Age": 9
+    },
+    {
+      "AircraftID": "P1002",
+      "TotalFlights": 45,
+      "TotalHours": 2700,
+      "AvgFuelConsumption": 2400,
+      "LifetimeFlights": 450,
+      "LifetimeHours": 27000,
+      "AvgMaintenanceCost": 48000,
+      "RangeKM": 3983,
+      "Capacity": 150,
+      "Age": 8
+    },
+    {
+      "AircraftID": "P1003",
+      "TotalFlights": 30,
+      "TotalHours": 1800,
+      "AvgFuelConsumption": 2600,
+      "LifetimeFlights": 300,
+      "LifetimeHours": 18000,
+      "AvgMaintenanceCost": 52000,
+      "RangeKM": 9800,
+      "Capacity": 396,
+      "Age": 6
+    },
+    {
+      "AircraftID": "P1004",
+      "TotalFlights": 40,
+      "TotalHours": 2400,
+      "AvgFuelConsumption": 2300,
+      "LifetimeFlights": 400,
+      "LifetimeHours": 24000,
+      "AvgMaintenanceCost": 47000,
+      "RangeKM": 13450,
+      "Capacity": 277,
+      "Age": 7
+    },
+    {
+      "AircraftID": "P1005",
+      "TotalFlights": 55,
+      "TotalHours": 3300,
+      "AvgFuelConsumption": 2450,
+      "LifetimeFlights": 550,
+      "LifetimeHours": 33000,
+      "AvgMaintenanceCost": 49000,
+      "RangeKM": 3000,
+      "Capacity": 180,
+      "Age": 10
+    },
+    {
+      "AircraftID": "P1006",
+      "TotalFlights": 35,
+      "TotalHours": 2100,
+      "AvgFuelConsumption": 2350,
+      "LifetimeFlights": 350,
+      "LifetimeHours": 21000,
+      "AvgMaintenanceCost": 46500,
+      "RangeKM": 3100,
+      "Capacity": 150,
+      "Age": 5
+    },
+    {
+      "AircraftID": "P1007",
+      "TotalFlights": 60,
+      "TotalHours": 3600,
+      "AvgFuelConsumption": 2200,
+      "LifetimeFlights": 600,
+      "LifetimeHours": 36000,
+      "AvgMaintenanceCost": 45000,
+      "RangeKM": 7405,
+      "Capacity": 242,
+      "Age": 4
+    },
+    {
+      "AircraftID": "P1008",
+      "TotalFlights": 65,
+      "TotalHours": 3900,
+      "AvgFuelConsumption": 2250,
+      "LifetimeFlights": 650,
+      "LifetimeHours": 39000,
+      "AvgMaintenanceCost": 45500,
+      "RangeKM": 8200,
+      "Capacity": 325,
+      "Age": 3
+    },
+    {
+      "AircraftID": "P1009",
+      "TotalFlights": 20,
+      "TotalHours": 1200,
+      "AvgFuelConsumption": 2550,
+      "LifetimeFlights": 200,
+      "LifetimeHours": 12000,
+      "AvgMaintenanceCost": 53000,
+      "RangeKM": 3000,
+      "Capacity": 180,
+      "Age": 11
+    },
+    {
+      "AircraftID": "P1010",
+      "TotalFlights": 25,
+      "TotalHours": 1500,
+      "AvgFuelConsumption": 2700,
+      "LifetimeFlights": 250,
+      "LifetimeHours": 15000,
+      "AvgMaintenanceCost": 55000,
+      "RangeKM": 15700,
+      "Capacity": 853,
+      "Age": 12
+    }
+  ]  

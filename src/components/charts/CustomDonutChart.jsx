@@ -8,12 +8,15 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { generateColors } from "../../utils";
+import { isArray } from "lodash";
 const CustomPieChart = ({ data, yAxis, xAxis, isPie }) => {
   const [colors, setColors] = useState([]);
   const [chartData, setChartData] = useState([]);
   useEffect(() => {
     if (data) {
-      console.log({ xAxis, yAxis });
+      if(isArray(yAxis)){
+        yAxis = yAxis[0].value
+      }
       const _chartData = data
         .map((e) => {
           if (e[yAxis] && e[xAxis])
@@ -26,23 +29,21 @@ const CustomPieChart = ({ data, yAxis, xAxis, isPie }) => {
         .filter((x) => x);
       setChartData(_chartData);
     }
-    console.log({ isPie });
   }, [data, yAxis, xAxis]);
 
   useEffect(() => {
     if (chartData.length) {
-      console.log({ chartData });
       setColors(generateColors(chartData.length));
     }
   }, [chartData]);
 
   return (
-    <>
-      <PieChart width={400} height={400}>
+    <ResponsiveContainer width={"100%"} height={"100%"}>
+      <PieChart width={300} height={400}>
         <Pie
           data={chartData}
-          cx={200}
-          cy={200}
+          cx="50%"
+          cy="50%"
           innerRadius={isPie ? 0 : 90}
           outerRadius={140}
           fill="#8884d8"
@@ -50,14 +51,15 @@ const CustomPieChart = ({ data, yAxis, xAxis, isPie }) => {
           dataKey="value"
           label
         >
+          50%
           {chartData.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index]} />
           ))}
         </Pie>
         {/* <Tooltip /> */}
-        <Legend />
+        <Legend/>
       </PieChart>
-    </>
+    </ResponsiveContainer>
   );
 };
 

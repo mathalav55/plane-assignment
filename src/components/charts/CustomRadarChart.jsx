@@ -34,6 +34,7 @@ const CustomRadarChart = ({ data, xAxis, yAxis }) => {
                 stroke={colors[index]}
                 fill={colors[index]}
                 fillOpacity={0.6}
+                key={index}
               />
             );
           })

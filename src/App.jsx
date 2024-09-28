@@ -113,45 +113,41 @@ function App() {
 
   // Headers of the given data to select axis keys
   const [headers, setHeaders] = useState([]);
-
+  // Toggle Multiple Selection
   return (
     <div className="">
-      <div className="my-[2rem] w-[90%] m-auto bg-white p-10 max-sm:p-3 rounded-lg border border-slate-200">
-        <h3 className="text-4xl font-semibold text-slate-600 text-center">
+      <div className="my-[2rem] w-[90%] m-auto bg-white p-10 max-md:p-3 rounded-lg border border-slate-200">
+        <h3 className="text-4xl font-semibold text-slate-600 text-center max-md:text-3xl">
           Dynamic Data Visualisation Dashboard
         </h3>
-        <div className="flex justify-between flex-wrap max-sm:gap-5 mt-10">
-          <div className="w-[40%] max-sm:w-[100%]">
+        <div className="flex justify-between flex-wrap max-md:gap-5 mt-10">
+          <div className="w-[40%] max-md:w-[100%]">
             {/* File Upload - Click or Drag and Drop */}
             <div className="">
               <div
                 {...getRootProps({ className: "dropzone" })}
-                className="rounded-md py-8 max-sm:px-12 px-40 w-fit border-slate-300 border-dashed border-[3px]"
+                className="rounded-md py-8 max-md:px-12 px-40 border-slate-300 border-dashed border-[3px] w-[100%]"
               >
                 <input {...getInputProps()} />
                 <div>
                   <p className="text-center">Upload File</p>
-                  <span className="text-xs font-medium text-slate-400">
+                  <p className="text-center text-xs font-medium text-slate-400">
                     Accepted files .csv, .json
-                  </span>
+                  </p>
                 </div>
               </div>
               {acceptedFiles.length ? (
-                <>
-                  <div className="flex gap-2  align-middle mt-3">
-                    <p className="text-sm">{acceptedFiles[0].name} </p>
-                    <div>
-                      <img
-                        src={CloseIcon}
-                        onClick={() => {
-                          setAcceptedFiles([]);
-                        }}
-                        alt=""
-                        className="cursor-pointer w-2 h-2"
-                      />
-                    </div>
-                  </div>
-                </>
+                <p className="text-sm mt-3 flex items-center gap-1">
+                  {acceptedFiles[0].name}
+                  <img
+                    src={CloseIcon}
+                    onClick={() => {
+                      setAcceptedFiles([]);
+                    }}
+                    alt=""
+                    className="cursor-pointer w-2 h-2"
+                  />
+                </p>
               ) : (
                 <></>
               )}
@@ -173,7 +169,7 @@ function App() {
                   />
                 </div>
                 <div className="flex flex-wrap gap-4 mt-5">
-                  <div className="w-[45%] max-sm:w-[100%]">
+                  <div className="w-[45%] max-md:w-[100%]">
                     <p className="text-sm font-medium mb-2">X-axis</p>
                     <Select
                       className=""
@@ -191,7 +187,7 @@ function App() {
                       isClearable
                     />
                   </div>
-                  <div className="w-[45%] max-sm:w-[100%]">
+                  <div className="w-[45%] max-md:w-[100%]">
                     <p className="text-sm font-medium mb-2">Y-axis</p>
                     <Select
                       className=""
@@ -229,7 +225,7 @@ function App() {
               </div> */}
             </div>
           </div>
-          <div className="w-[50%] max-sm:w-[100%]">
+          <div className="w-[50%] max-md:w-[100%] min-h-[400px]">
             {config.chartType && <DynamicChart {...config} />}
           </div>
         </div>

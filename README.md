@@ -20,18 +20,18 @@ A web-based interactive dashboard built with React and Recharts, allowing users 
 - npm or yarn
 
 ### Steps
-1. **Clone the Repository:**
+**1. Clone the Repository:**
 ```
     git clone https://github.com/mathalav55/plane-assignment
     cd plane-assignment
 ```
-2. **Install Dependencies:**
+**2. Install Dependencies:**
 ``` 
     npm install
     # or
     yarn install
 ```
-3. **Start the Development Server:**
+**3. Start the Development Server:**
 ```
     npm start
     # or
@@ -44,3 +44,8 @@ A web-based interactive dashboard built with React and Recharts, allowing users 
     yarn build
 ```
 
+## Tools Used
+
+[📊 Recharts](https://recharts.org/en-US)
+
+[📝 Papa Parse 5](https://www.papaparse.com/docs)

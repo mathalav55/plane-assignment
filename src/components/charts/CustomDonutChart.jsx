@@ -56,7 +56,7 @@ const CustomPieChart = ({ data, yAxis, xAxis, isPie }) => {
             <Cell key={`cell-${index}`} fill={colors[index]} />
           ))}
         </Pie>
-        {/* <Tooltip /> */}
+        <Tooltip />
         <Legend/>
       </PieChart>
     </ResponsiveContainer>

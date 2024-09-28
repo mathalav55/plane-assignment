@@ -7,6 +7,7 @@ import {
   PolarRadiusAxis,
   Radar,
   Legend,
+  Tooltip,
 } from "recharts";
 import { capitalize, isArray } from "lodash";
 import { generateColors } from "../../utils";
@@ -47,6 +48,7 @@ const CustomRadarChart = ({ data, xAxis, yAxis }) => {
             fillOpacity={0.6}
           />
         )}
+        <Tooltip/>
         <Legend/>
       </RadarChart>
     </ResponsiveContainer>
